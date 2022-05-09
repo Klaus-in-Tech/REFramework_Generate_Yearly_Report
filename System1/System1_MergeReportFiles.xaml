@@ -1,13 +1,12 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="System1_MergeReportFiles" this:System1_MergeReportFiles.in_WorkFilePath="C:\Users\A241907\Documents\UiPath\Generate_Yearly_Report\Data\Output" this:System1_MergeReportFiles.in_MergedReportFilePath="C:\Users\A241907\Documents\UiPath\Generate_Yearly_Report\Data\Output\Yearly-Report-2021-TAXID.xlsx" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:si="clr-namespace:System.IO;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="System1_MergeReportFiles" this:System1_MergeReportFiles.in_WorkFilePath="C:\Users\A241907\Documents\UiPath\Generate_Yearly_Report\Data\Output" this:System1_MergeReportFiles.in_MergedReportFilePath="C:\Users\A241907\Documents\UiPath\Generate_Yearly_Report\Data\Output\Yearly-Report-2021-TAXID.xlsx" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="in_WorkFilePath" Type="InArgument(x:String)" />
-    <x:Property Name="in_DownloadedReport" Type="InArgument(si:FileInfo)" />
     <x:Property Name="in_MergedReportFilePath" Type="InArgument(x:String)" />
   </x:Members>
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1071,1102</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1131,1102</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>System1_MergeReportFiles_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="60">
@@ -73,7 +72,6 @@
       <AssemblyReference>UiPath.Excel</AssemblyReference>
       <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
       <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="System1_MergeReportFiles" sap:VirtualizedContainerService.HintSize="795,1037" sap2010:WorkflowViewState.IdRef="Sequence_1">

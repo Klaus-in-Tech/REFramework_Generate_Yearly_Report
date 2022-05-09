@@ -1,12 +1,12 @@
 <Activity mc:Ignorable="sap sap2010" x:Class="System1_GetWorkItems" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:str="clr-namespace:System.Text.RegularExpressions;assembly=System" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="in_WorkItemId" Type="InArgument(x:String)" />
-    <x:Property Name="out_TaxId" Type="OutArgument(x:String)" />
+    <x:Property Name="out_VendorTaxId" Type="OutArgument(x:String)" />
   </x:Members>
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1405,1298</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1131,1419</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>System1_GetWorkItems_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="74">
@@ -87,22 +87,21 @@
       <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
       <AssemblyReference>UiPath.Vision.Core</AssemblyReference>
       <AssemblyReference>UiPath.OCR.Contracts</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="System1_GetWorkItems" sap:VirtualizedContainerService.HintSize="602,1364" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="System1_GetWorkItems" sap:VirtualizedContainerService.HintSize="602,1354" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:OpenBrowser AutomaticallyDownloadWebDriver="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Open " sap:VirtualizedContainerService.HintSize="560,1272" sap2010:WorkflowViewState.IdRef="OpenBrowser_2" Url="https://acme-test.uipath.com/work-items/82892895">
+    <ui:OpenBrowser AutomaticallyDownloadWebDriver="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Open " sap:VirtualizedContainerService.HintSize="560,1262" sap2010:WorkflowViewState.IdRef="OpenBrowser_2" Url="https://acme-test.uipath.com/work-items/82892895">
       <ui:OpenBrowser.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="526,1171" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="526,1161" sap2010:WorkflowViewState.IdRef="Sequence_3">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="clientDetails" />
               <Variable x:TypeArguments="str:Match" Name="match" />
@@ -132,7 +131,7 @@
                 <InArgument x:TypeArguments="str:Match">[Regex.Match(clientDetails, "\s+TaxID: (\w+)")]</InArgument>
               </Assign.Value>
             </Assign>
-            <If Condition="[not match.Success]" sap:VirtualizedContainerService.HintSize="484,431" sap2010:WorkflowViewState.IdRef="If_1">
+            <If Condition="[not match.Success]" sap:VirtualizedContainerService.HintSize="484,421" sap2010:WorkflowViewState.IdRef="If_1">
               <If.Then>
                 <Sequence sap:VirtualizedContainerService.HintSize="376,245" sap2010:WorkflowViewState.IdRef="Sequence_5">
                   <sap:WorkflowViewStateService.ViewState>
@@ -160,7 +159,7 @@
                 <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
                   <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
                     <ui:AssignOperation.To>
-                      <OutArgument x:TypeArguments="x:String">[out_TaxId]</OutArgument>
+                      <OutArgument x:TypeArguments="x:String">[out_VendorTaxId]</OutArgument>
                     </ui:AssignOperation.To>
                     <ui:AssignOperation.Value>
                       <InArgument x:TypeArguments="x:String">[match.Groups(1).Value]</InArgument>
@@ -169,7 +168,7 @@
                 </scg:List>
               </ui:MultipleAssign.AssignOperations>
             </ui:MultipleAssign>
-            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="484,91" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Trace" Message="[&quot;Tax Id : &quot; +out_TaxId]" />
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="484,91" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Trace" Message="[&quot;Tax Id : &quot; +out_VendorTaxId]" />
           </Sequence>
         </ActivityAction>
       </ui:OpenBrowser.Body>

@@ -4,12 +4,11 @@
     <x:Property Name="in_Year" Type="InArgument(x:String)" />
     <x:Property Name="in_VendorTaxId" Type="InArgument(x:String)" />
     <x:Property Name="in_DownloadsFilePath" Type="InArgument(x:String)" />
-    <x:Property Name="in_DownloadedReport" Type="InArgument(si:FileInfo)" />
   </x:Members>
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1071,1141</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1131,1131</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>System1_DownloadMultipleMonthlyReports_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="52">
@@ -76,32 +75,32 @@
       <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="System1_DownloadMultipleMonthlyReports" sap:VirtualizedContainerService.HintSize="680,1076" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="System1_DownloadMultipleMonthlyReports" sap:VirtualizedContainerService.HintSize="680,1066" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:OpenBrowser AutomaticallyDownloadWebDriver="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="638,984" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" Url="https://acme-test.uipath.com/reports/download">
+    <ui:OpenBrowser AutomaticallyDownloadWebDriver="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="638,974" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" Url="https://acme-test.uipath.com/reports/download">
       <ui:OpenBrowser.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="604,883" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="604,873" sap2010:WorkflowViewState.IdRef="Sequence_3">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <ui:MaximizeWindow Window="{x:Null}" DisplayName="Maximize Window" sap:VirtualizedContainerService.HintSize="562,22" sap2010:WorkflowViewState.IdRef="MaximizeWindow_1" />
-            <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="562,667" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[System.Globalization.CultureInfo.InvariantCulture.DateTimeFormat.MonthNames]">
+            <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="562,657" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[System.Globalization.CultureInfo.InvariantCulture.DateTimeFormat.MonthNames]">
               <ui:ForEach.Body>
                 <ActivityAction x:TypeArguments="x:String">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="x:String" Name="month" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="526,544" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="526,534" sap2010:WorkflowViewState.IdRef="Sequence_2">
                     <Sequence.Variables>
                       <Variable x:TypeArguments="si:FileInfo" Name="fileDownloadedReport" />
                       <Variable x:TypeArguments="x:String" Name="strMonth" />
@@ -111,7 +110,7 @@
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <If Condition="[string.IsNullOrEmpty(month)]" sap:VirtualizedContainerService.HintSize="484,300" sap2010:WorkflowViewState.IdRef="If_1">
+                    <If Condition="[string.IsNullOrEmpty(month)]" sap:VirtualizedContainerService.HintSize="484,290" sap2010:WorkflowViewState.IdRef="If_1">
                       <If.Then>
                         <Sequence sap:VirtualizedContainerService.HintSize="242,114" sap2010:WorkflowViewState.IdRef="Sequence_4">
                           <sap:WorkflowViewStateService.ViewState>
@@ -149,9 +148,7 @@
                         <InArgument x:TypeArguments="x:String" x:Key="in_WorkFilePath">
                           <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_WorkFilePath" />
                         </InArgument>
-                        <OutArgument x:TypeArguments="si:FileInfo" x:Key="out_DownloadedReport">
-                          <mva:VisualBasicReference x:TypeArguments="si:FileInfo" ExpressionText="in_DownloadedReport" />
-                        </OutArgument>
+                        <OutArgument x:TypeArguments="si:FileInfo" x:Key="out_DownloadedReport" />
                       </ui:InvokeWorkflowFile.Arguments>
                     </ui:InvokeWorkflowFile>
                   </Sequence>
