@@ -8,7 +8,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1131,2915</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>851,2908</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Sytem1_UploadYearlyReport_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="29">
@@ -71,11 +71,10 @@
       <AssemblyReference>System.ValueTuple</AssemblyReference>
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
       <AssemblyReference>UiPath.Excel</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
       <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Sytem1_UploadYearlyReport" sap:VirtualizedContainerService.HintSize="708,2850" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Sytem1_UploadYearlyReport" sap:VirtualizedContainerService.HintSize="708,2843" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="s:Exception" Name="exception" />
     </Sequence.Variables>
@@ -84,22 +83,22 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:OpenBrowser AutomaticallyDownloadWebDriver="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Open https://acme-test.uipath.com/reports/upload" sap:VirtualizedContainerService.HintSize="666,2758" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" Url="https://acme-test.uipath.com/reports/upload">
+    <ui:OpenBrowser AutomaticallyDownloadWebDriver="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Open https://acme-test.uipath.com/reports/upload" sap:VirtualizedContainerService.HintSize="666,2751" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" Url="https://acme-test.uipath.com/reports/upload">
       <ui:OpenBrowser.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="632,2656" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="632,2650" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <ui:MaximizeWindow Window="{x:Null}" DisplayName="Maximize Window" sap:VirtualizedContainerService.HintSize="590,22" sap2010:WorkflowViewState.IdRef="MaximizeWindow_1" />
-            <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="590,2169" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+            <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="590,2163" sap2010:WorkflowViewState.IdRef="TryCatch_1">
               <TryCatch.Try>
-                <Sequence sap:VirtualizedContainerService.HintSize="552,1937" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                <Sequence sap:VirtualizedContainerService.HintSize="552,1935" sap2010:WorkflowViewState.IdRef="Sequence_6">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -138,13 +137,13 @@
                       </ui:Target>
                     </ui:Click.Target>
                   </ui:Click>
-                  <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach Window - Open Dialog" sap:VirtualizedContainerService.HintSize="510,1389" sap2010:WorkflowViewState.IdRef="WindowScope_2" Selector="&lt;wnd app='chrome.exe' title='Open' /&gt;">
+                  <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach Window - Open Dialog" sap:VirtualizedContainerService.HintSize="510,1387" sap2010:WorkflowViewState.IdRef="WindowScope_2" Selector="&lt;wnd app='chrome.exe' title='Open' /&gt;">
                     <ui:WindowScope.Body>
                       <ActivityAction x:TypeArguments="x:Object">
                         <ActivityAction.Argument>
                           <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
                         </ActivityAction.Argument>
-                        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="476,1281" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="476,1279" sap2010:WorkflowViewState.IdRef="Sequence_5">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -182,20 +181,20 @@
                               <ui:CursorPosition OffsetX="76" OffsetY="11" Position="TopLeft" />
                             </ui:Click.CursorPosition>
                             <ui:Click.Target>
-                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="fe614db4-3438-4e67-8834-26a1f7ab33e2" InformativeScreenshot="53ee9e2e3fa006adc314aafdfd656fc3" Selector="&lt;webctrl id='buttonUpload' tag='BUTTON' /&gt;" WaitForReady="COMPLETE">
+                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="fe614db4-3438-4e67-8834-26a1f7ab33e2" InformativeScreenshot="53ee9e2e3fa006adc314aafdfd656fc3" Selector="&lt;html app='chrome.exe' title='ACME System 1 - Upload Yearly Report' /&gt;&lt;webctrl innertext='Upload Report' type='button' /&gt;" WaitForReady="COMPLETE">
                                 <ui:Target.TimeoutMS>
                                   <InArgument x:TypeArguments="x:Int32" />
                                 </ui:Target.TimeoutMS>
                               </ui:Target>
                             </ui:Click.Target>
                           </ui:Click>
-                          <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach Window - OK Window" sap:VirtualizedContainerService.HintSize="434,723" sap2010:WorkflowViewState.IdRef="WindowScope_1" InformativeScreenshot="a3101e7f724144e2d30143f5b6ec014c" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='ACME System 1 - Upload Yearly Report - Google Chrome' /&gt;&lt;ctrl name='acme-test.uipath.com says' role='dialog' /&gt;&lt;ctrl name='OK' role='push button' /&gt;">
+                          <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach Window - OK Window" sap:VirtualizedContainerService.HintSize="434,721" sap2010:WorkflowViewState.IdRef="WindowScope_1" InformativeScreenshot="a3101e7f724144e2d30143f5b6ec014c" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='ACME System 1 - Upload Yearly Report - Google Chrome' /&gt;&lt;ctrl name='acme-test.uipath.com says' role='dialog' /&gt;&lt;ctrl name='OK' role='push button' /&gt;">
                             <ui:WindowScope.Body>
                               <ActivityAction x:TypeArguments="x:Object">
                                 <ActivityAction.Argument>
                                   <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
                                 </ActivityAction.Argument>
-                                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,577" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,575" sap2010:WorkflowViewState.IdRef="Sequence_3">
                                   <Sequence.Variables>
                                     <Variable x:TypeArguments="x:String" Name="uploadConformationMessage" />
                                   </Sequence.Variables>
@@ -242,7 +241,7 @@
                                       </ui:Target>
                                     </ui:Click.Target>
                                   </ui:Click>
-                                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,93" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;Confimation ID is : &quot; +out_ConfirmationId]" />
+                                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;Confimation ID is : &quot; +out_ConfirmationId]" />
                                 </Sequence>
                               </ActivityAction>
                             </ui:WindowScope.Body>
